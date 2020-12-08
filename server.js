@@ -1,11 +1,11 @@
 require('dotenv').config();
-// require('./lib/pool').connect();
+require('./lib/pool').connect();
 
-const app = require('./lib/app');
-
+const { app } = require('./index');
 const PORT = 3001;
 
 app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log(`Started on ${PORT}`);
+    console.log(`Started on ${PORT}`);
 });
+
+// eslint-disable-next-line no-console
