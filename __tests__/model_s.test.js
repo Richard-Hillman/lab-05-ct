@@ -46,6 +46,27 @@ describe('endpoint', () => {
 
   // -----------------------------------------------------
 
+  test('gets all rows from models table', async() => {
+    const expectation = [
+      {
+        title: 'Model S',
+        descript: 'an evolution in automobile engineering. Dual Motor Model S is a categorical improvement on conventional all-wheel drive systems. With two motors, one in the front and one in the rear, Model S digitally and independently controls torque to the front and rear wheels.', 
+        model: 'Long Range Plus',
+        color: 'Solid Black',
+        wheelType: '19inch Tempest',
+        interior: 'All Black',
+        id: '1'
+      }
+    ];
+
+
+    const data = await request(app) 
+      .get('/tesla/model_s/')
+      .expect('Content-Type', /json/)
+      .expect(200);
+    expect(data.body).toEqual(expectation); 
+      
+  });
 
 
   // -----------------------------------------------------
