@@ -2,7 +2,7 @@
   "name": "five-rings",
   "version": "1.0.0",
   "description": "",
-  "main": "srever.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest --verbose --runInBand --testLocationInResults --setupFiles dotenv/config",
     "test:watch": "npm run test -- --watch",
